@@ -36,6 +36,7 @@ public class OrderServiceImpl implements OrderService {
 
     @Override
     public Product findById(Long id) {
+
 //        return restTemplate.getForObject("http://192.168.0.6:9001/product/" + id, Product.class);
 
 //        List<ServiceInstance> instances = discoveryClient.getInstances("product-service");
