@@ -5,7 +5,8 @@ spring:
     name: product-service
   datasource:
     driver-class-name: com.mysql.jdbc.Driver
-    url: jdbc:mysql://192.168.0.7/shop?useUnicode=true&characterEncoding=utf8
+    url: jdbc:mysql://10.0.200.56/shop?useUnicode=true&characterEncoding=utf8
+   # url: jdbc:mysql://192.168.0.7/shop?useUnicode=true&characterEncoding=utf8
     username: toby
     password: toby
   jpa:
@@ -15,7 +16,7 @@ spring:
 eureka:
   client:
     serviceUrl:
-      defaultZone: http://192.168.0.6:9000/eureka/
+      defaultZone: http://localhost:9000/eureka/
   instance:
     prefer-ip-address: true
     instance-id: ${spring.cloud.client.ip-address}:${server.port} #向注册中心注册服务id

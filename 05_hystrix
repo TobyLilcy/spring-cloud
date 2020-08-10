@@ -1,0 +1,26 @@
+一: 单个熔断
+    1: 引入依赖
+        spring-cloud-starter-netflix-hystrix
+    2: 在启动类中激活Hystrix
+        @EnableCircuitBreaker
+    3: 配置熔断触发的降级逻辑
+        findByIdFallback()
+    4: 在需要保护的接口上使用@HystrixCommand配置
+        @HystrixCommand(fallbackMethod = "findByIdFallback")
+
+二: 统一熔断
+    3: 配置统一默认的熔断触发降级逻辑, 不能有参数
+        defaultFallback()
+    4: 再需要熔断的类上加上
+        @DefaultProperties(defaultFallback = "defaultFallback")
+
+三: 对feign的支持
+    1: 引入依赖
+        feign中已经继承了Hystrix,
+    2: 在feign的配置文件中开启Hystrix
+        feign:
+          hystrix:
+            enabled: true
+    3: 创建一个类实现feign接口, 这个实现类就是熔断降级逻辑
+        ProductFeignClientCallBack
+    4: 修改feign接口, 添加降级方法支持

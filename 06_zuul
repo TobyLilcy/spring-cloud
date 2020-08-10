@@ -1,0 +1,23 @@
+一: 基础路由配置
+    1: 引入依赖
+        spring-cloud-starter-netflix-zuul
+    2: 配置文件
+        application.yml
+    3: 配置启动类, 开启网关服务功能
+        @EnableZuulProxy
+    4: 路由配置
+        zuul:
+          routes:
+
+二: 面向服务的路由
+    1: 添加eureka的依赖
+        spring-cloud-starter-netflix-eureka-client
+    2: 启动类开启eureka的客户端发现 (新版本可以省略)
+        @EnableDiscoveryClient
+    3: 在zuul网关的配置中配置eureka的注册中心信息
+        eureka:
+          client:
+            serviceUrl:
+              defaultZone:
+    4: 修改路由的映射配置
+        serviceId

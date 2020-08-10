@@ -1,0 +1,21 @@
+server:
+  port: 9010
+spring:
+  application:
+    name: api-zuul-serivce
+zuul:
+  routes:
+#    product-service: #路由id, 随便写
+#      path: /product-service/** #映射路径
+#      url: http://localhost:9001/ #映射路径对应的实际微服务url地址
+#      serviceId: product-service #配置转发的微服务名称
+    product-service: /product-service/** #如果路由id和对应的微服务的serviceId一致, 可以简化
+    order-service: /order-service/**
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:9000/eureka/
+  instance:
+    prefer-ip-address: true
+    instance-id: ${spring.cloud.client.ip-address}:${server.port} #向注册中心注册服务id
