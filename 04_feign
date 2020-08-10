@@ -1,0 +1,6 @@
+1: 引入依赖
+    spring-cloud-starter-openfeign
+2: 启动类添加Feign的支持
+    @EnableFeignClients
+3: 添加fegin client 接口
+    ProductFeginClient

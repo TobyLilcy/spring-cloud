@@ -1,0 +1,2 @@
+1: 修改服务消费者order-service模块中的启动类, 在创建RestTemplate方法上添加@LoadBalanced注解
+2: 使用product-service替换ip

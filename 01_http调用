@@ -1,0 +1,2 @@
+1: 配置RestTemplate交给spring管理
+2: 通过restTemplate调用服务
