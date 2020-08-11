@@ -11,9 +11,8 @@
     <modules>
         <module>product-servcie</module>
         <module>order-service</module>
-        <module>eurekaservice</module>
+        <module>eureka-service</module>
         <module>import-test</module>
-        <module>api-zuul-service/api-zuul-service</module>
         <module>api-zuul-service</module>
     </modules>
 
