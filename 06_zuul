@@ -21,3 +21,7 @@
               defaultZone:
     4: 修改路由的映射配置
         serviceId
+
+三: zuul网关
+    1: 创建一个类, 继承ZuulFilter
+        LoginFilter

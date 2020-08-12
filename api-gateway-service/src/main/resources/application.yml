@@ -1,0 +1,32 @@
+server:
+  port: 9011
+spring:
+  application:
+    name: api-gateway-service
+  cloud:
+    gateway:
+      routes:
+      - id: product-service #自定义路由id, 保持唯一
+#        uri: http://localhost:9001 #目标服务器的地址
+        uri: lb://product-service #lb开头代表从注册中心获取服务, 后面接的是你需要转发到的服务名称
+        predicates:
+        - Path=/product/** #路由条件: path: 路由匹配条件
+      - id: order-service #自定义路由id, 保持唯一
+        uri: lb://order-service #lb开头代表从注册中心获取服务, 后面接的是你需要转发到的服务名称
+        predicates:
+        - Path=/order/** #路由条件: path: 路由匹配条件
+  zipkin:
+    base-url: http://localhost:9411/
+    sender:
+      type: web
+  sleuth:
+    sampler:
+      probability: 1.0
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:9000/eureka/
+  instance:
+    prefer-ip-address: true
+    instance-id: ${spring.cloud.client.ip-address}:${server.port} #向注册中心注册服务id
+

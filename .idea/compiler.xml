@@ -6,18 +6,26 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="api-gateway-service" />
         <module name="api-zuul-service" />
+        <module name="config-service" />
         <module name="eureka-service" />
         <module name="import-test" />
+        <module name="input-stream" />
         <module name="order-service" />
+        <module name="out-stream" />
         <module name="product-servcie" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="api-gateway-service" target="1.8" />
       <module name="api-zuul-service" target="1.8" />
+      <module name="config-service" target="1.8" />
       <module name="eureka-service" target="1.8" />
       <module name="import-test" target="1.8" />
+      <module name="input-stream" target="1.8" />
       <module name="order-service" target="1.8" />
+      <module name="out-stream" target="1.8" />
       <module name="product-servcie" target="1.8" />
       <module name="spring-cloud-demo" target="1.8" />
     </bytecodeTargetLevel>

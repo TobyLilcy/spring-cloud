@@ -1,0 +1,20 @@
+一: 路由配置
+    1: 创建工程
+        api-gateway-service
+    2: 引入gateway依赖
+        spring-cloud-starter-gateway
+    3: 配置启动类
+        ApiGatewayServiceApplication
+    4: 编写配置文件
+        application.yml
+
+二: 面向对象路由
+    1: 引入eureka依赖
+        spring-cloud-starter-netflix-eureka-client
+    2: 启动类中激活eureka (可省略)
+    3: 修改配置文件
+        application.yml
+
+三: gateway网关
+    1: 创建一个类, 实现GlobalFilter, Ordered
+        LoginFilter

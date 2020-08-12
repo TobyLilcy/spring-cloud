@@ -2,10 +2,14 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/api-gateway-service/api-gateway-service.iml" filepath="$PROJECT_DIR$/api-gateway-service/api-gateway-service.iml" />
       <module fileurl="file://$PROJECT_DIR$/api-zuul-service/api-zuul-service.iml" filepath="$PROJECT_DIR$/api-zuul-service/api-zuul-service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/config-service/config-service.iml" filepath="$PROJECT_DIR$/config-service/config-service.iml" />
       <module fileurl="file://$PROJECT_DIR$/eureka-service/eureka-service.iml" filepath="$PROJECT_DIR$/eureka-service/eureka-service.iml" />
       <module fileurl="file://$PROJECT_DIR$/import-test/import-test.iml" filepath="$PROJECT_DIR$/import-test/import-test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/input-stream/input-stream.iml" filepath="$PROJECT_DIR$/input-stream/input-stream.iml" />
       <module fileurl="file://$PROJECT_DIR$/order-service/order-service.iml" filepath="$PROJECT_DIR$/order-service/order-service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/out-stream/out-stream.iml" filepath="$PROJECT_DIR$/out-stream/out-stream.iml" />
       <module fileurl="file://$PROJECT_DIR$/product-servcie/product-servcie.iml" filepath="$PROJECT_DIR$/product-servcie/product-servcie.iml" />
       <module fileurl="file://$PROJECT_DIR$/spring-cloud-demo.iml" filepath="$PROJECT_DIR$/spring-cloud-demo.iml" />
     </modules>

@@ -1,0 +1,10 @@
+1: 创建项目
+    confing-service
+2: 引入config依赖
+    spring-cloud-config-server
+3: 修改启动类, 开启config
+    @EnableConfigServer
+4: 修改配置
+    application.yml
+5: 访问
+    http://localhost:10000/application-texst.yml

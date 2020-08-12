@@ -14,6 +14,10 @@
         <module>eureka-service</module>
         <module>import-test</module>
         <module>api-zuul-service</module>
+        <module>api-gateway-service</module>
+        <module>out-stream</module>
+        <module>input-stream</module>
+        <module>config-service</module>
     </modules>
 
     <parent>
@@ -29,10 +33,6 @@
     </properties>
 
     <dependencies>
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-web</artifactId>
-        </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-logging</artifactId>

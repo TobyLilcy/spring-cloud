@@ -1,0 +1,13 @@
+1: 创建out和input项目,
+    out-tream/input-tream
+2: 引入依赖
+    spring-cloud-stream/spring-cloud-starter-stream-rabbit/spring-cloud-stream-binder-rabbit
+3: 安装rabbitMQ
+    http://10.0.200.52:1567
+    toby/toby
+4: 配置文件
+    application.yml
+5: 编写发送消息和接受消息
+    OutMessage/InputMessage
+6: 测试
+    OutStreamApplicationTest

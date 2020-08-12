@@ -1,0 +1,16 @@
+1: 引入依赖
+    spring-cloud-starter-zipkin
+2: 修改配置
+      zipkin:
+        base-url: http://localhost:9411/
+        sender:
+          type: web
+      sleuth:
+        sampler:
+          probability: 1.0
+3: 启动jar
+    java -jar zipkin-server-2.12.9-exec.jar
+4: 保存mysql启动jar
+    java -jar zipkin-server-2.12.9-exec.jar --STORAGE_TYPE=mysql --MYSQL_HOST=10.0.200.56 --MYSQL_TCP_PORT=3306 --MYSQL_DB=zipkin --MYSQL_USER=toby --MYSQL_PASS=toby
+5: 访问zipkin
+    http://localhost:9411/zipkin

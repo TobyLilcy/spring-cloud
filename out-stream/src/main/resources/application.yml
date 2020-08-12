@@ -1,0 +1,18 @@
+server:
+  port: 9003
+spring:
+  application:
+    name: out-stream-service
+  rabbitmq:
+    addresses: 10.0.200.52
+    username: toby
+    password: toby
+
+  cloud:
+    stream:
+      bindings:
+        output:
+          destination: com.lcy
+      binders:
+        defaultRabbit:
+          type: rabbit
